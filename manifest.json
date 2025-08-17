@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Highlight & AI Assistant",
+  "description": "Highlight text on any webpage and instantly query ChatGPT for summaries, translations, explanations, and more. Saves highlights across sessions.",
+  "version": "1.0.0",
+  "minimum_chrome_version": "114",
+  "permissions": ["storage", "contextMenus", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Smart Highlight & AI Assistant",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["utils.js", "contentScript.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/ai-16.png",
+    "48": "icons/ai-48.png",
+    "128": "icons/ai-128.png"
+  }
+}
