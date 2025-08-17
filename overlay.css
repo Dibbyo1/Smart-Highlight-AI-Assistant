@@ -1,0 +1,52 @@
+#smart-ai-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2147483646;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+#smart-ai-overlay.hidden { display: none; }
+
+.smart-ai-card {
+  width: min(520px, 90vw);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 8px 28px rgba(0,0,0,.15);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.smart-ai-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 12px;
+  background: #f7f7f8;
+  cursor: move;
+  user-select: none;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.smart-ai-title { font-weight: 600; font-size: 14px; }
+.smart-ai-actions button {
+  appearance: none; border: none; background: transparent; cursor: pointer;
+  padding: 6px 8px; border-radius: 8px; font-size: 12px;
+}
+.smart-ai-actions button:hover { background: rgba(0,0,0,.06); }
+
+.smart-ai-body { padding: 12px; max-height: 50vh; overflow: auto; }
+.smart-ai-status { color: #555; font-style: italic; }
+.smart-ai-result { white-space: pre-wrap; line-height: 1.45; font-size: 14px; }
+
+.smart-ai-footer {
+  display: flex; gap: 8px; justify-content: flex-end;
+  padding: 10px 12px; background: #fafafb; border-top: 1px solid rgba(0,0,0,.06);
+}
+.smart-ai-footer button {
+  appearance: none; border: 1px solid rgba(0,0,0,.12); background: #fff;
+  padding: 6px 10px; border-radius: 10px; cursor: pointer; font-size: 12px;
+}
+.smart-ai-footer button:hover { background: #f3f4f6; }
+
+mark.smart-highlight-mark {
+  background: #fff3b0;
+  padding: 0 2px;
+  border-radius: 3px;
+}
