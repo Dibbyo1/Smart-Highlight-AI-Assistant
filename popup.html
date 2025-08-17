@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Highlight & AI</title>
+  <style>
+    body { width: 320px; font: 13px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; padding: 12px; }
+    h1 { font-size: 14px; margin: 0 0 8px; }
+    .row { margin-bottom: 12px; }
+    input, button { width: 100%; box-sizing: border-box; }
+    input { padding: 8px; border: 1px solid #ccc; border-radius: 8px; }
+    button { padding: 8px; border: 1px solid #ddd; border-radius: 8px; background: #fff; cursor: pointer; }
+    button.primary { background: #111827; color: #fff; border-color: #111827; }
+    small { color: #666; }
+    ul { padding-left: 16px; max-height: 140px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Smart Highlight & AI</h1>
+  <div class="row">
+    <button id="openOptions" class="primary">Open Options (API Key & Prompts)</button>
+  </div>
+  <div class="row">
+    <button id="restore">Restore Highlights on this page</button>
+  </div>
+  <div class="row">
+    <small>Tip: Select text → right-click → “Ask AI about selection”.</small>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
